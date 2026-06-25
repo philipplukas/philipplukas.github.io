@@ -1,4 +1,5 @@
 title: Philipp Guldimann
+description: Data & ML Systems Engineer — LLM evaluation, RAG, and data infrastructure, from zero to production.
 logo: /assets/img/headshot_circle.jpeg
-show_downloads: true
+show_downloads: false
 theme: jekyll-theme-minimal
