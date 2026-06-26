@@ -48,7 +48,7 @@ Core contributor to COMPL-AI, evaluating 10+ models across 20 benchmarks spannin
 ## Education
 
 - **MSc Computer Science — Machine Intelligence**, ETH Zürich *(Sept 2022 – Dec 2024)*
-  Thesis (top grade): *Speech Recognition for Children with Congenital Disorders Using Adaptive Methods.*
+  Thesis (top grade): *Speech Recognition for Children with Congenital Disorders Using Adaptive Methods* — [read on the ETH Research Collection](https://www.research-collection.ethz.ch/server/api/core/bitstreams/e8ebef12-7c5f-4d2a-b469-30a29ed608b6/content).
 - **BSc Computer Science**, ETH Zürich *(Sept 2018 – Aug 2022)*
   Thesis (top grade): *Detecting Disinformation on Twitter Targeting Non-Profit Organisations* (in collaboration with the ICRC).
 
