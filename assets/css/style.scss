@@ -1,0 +1,18 @@
+---
+# Custom overrides on top of jekyll-theme-minimal.
+# Swaps the theme's default blue for a viridis-green brand accent
+# so the site matches the LinkedIn banner / CV identity.
+---
+
+@import "{{ site.theme }}";
+
+$viridis-green: #178a5a;
+$viridis-green-dark: #0f5f3d;
+
+a { color: $viridis-green; }
+a:hover,
+a:focus { color: $viridis-green-dark; }
+
+/* sidebar title + any header links pick up the brand accent */
+header h1,
+header h1 a { color: $viridis-green; }

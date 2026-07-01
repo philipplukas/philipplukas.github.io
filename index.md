@@ -1,17 +1,17 @@
 ---
 title: Philipp Guldimann
-description: Data & ML Systems Engineer — LLM evaluation, RAG, and data infrastructure, from zero to production.
+description: AI & Platform Engineer — from data to AI that creates value in production.
 ---
 
 # Philipp Guldimann
-### Data & ML Systems Engineer · Zürich, Switzerland
+### AI & Platform Engineer · Zürich, Switzerland
 
-[GitHub](https://github.com/philipplukas) · [LinkedIn](https://linkedin.com/in/philipplukas) · [Email](mailto:phil.guldimann@gmail.com)
+[GitHub](https://github.com/philipplukas) · [LinkedIn](https://linkedin.com/in/philippguldimann) · [Email](mailto:phil.guldimann@gmail.com)
 
-I build evaluation and data infrastructure for AI products — from zero to production. At a Zürich AI startup I built LLM evaluation infrastructure (23 evaluators, 10+ models assessed) that cut QA cycles from two days to four hours, and I'm now building multi-jurisdiction legal AI pipelines that process roughly one million documents across three countries. I hold an MSc in Machine Intelligence from ETH Zürich, and I care about pragmatic, scalable systems that ship and prove their value with metrics.
+I'm an AI and platform engineer who turns research into systems that scale — the infrastructure that carries data from raw ingestion to AI that creates value in production. At a Zürich AI startup I built LLM evaluation infrastructure (23 evaluators, 10+ models assessed) that cut QA cycles from two days to four hours, and I'm now building multi-jurisdiction legal AI pipelines that process roughly one million documents across three countries. My roots are in trustworthy AI research — I was a core contributor to COMPL-AI, an open benchmark for LLM compliance with the EU AI Act. I hold an MSc in Machine Intelligence from ETH Zürich, and I care about pragmatic, scalable systems that ship and prove their value with metrics.
 
 #### Technical focus
-LLM evaluation · RAG systems · Data pipelines · MLOps · TypeScript / Python · AWS / Azure
+LLMs & agents · Evaluation & MLOps · Data pipelines · Trustworthy AI · Python / TypeScript · AWS / Azure
 
 ---
 
