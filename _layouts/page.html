@@ -1,0 +1,9 @@
+---
+layout: default
+---
+<article class="prose">
+  {%- if page.show_title != false and page.title and page.hero != true -%}
+  <h1 class="page-title">{{ page.title }}</h1>
+  {%- endif -%}
+  {{ content }}
+</article>

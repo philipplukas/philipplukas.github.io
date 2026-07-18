@@ -1,4 +1,38 @@
 title: Philipp Guldimann
 description: AI & Platform Engineer — from data to AI that creates value in production.
-show_downloads: false
-theme: jekyll-theme-minimal
+url: https://philippguldimann.ch
+lang: en
+
+author:
+  name: Philipp Guldimann
+  email: phil.guldimann@gmail.com
+
+# Custom layouts live in _layouts — no remote theme.
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+feed:
+  path: feed.xml
+
+permalink: /writing/:title/
+
+# Only posts get a blanket default. Pages set `layout:` explicitly so that
+# front-matter'd assets (style.scss) never inherit an HTML layout.
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+
+social:
+  github: philipplukas
+  linkedin: philippguldimann
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor

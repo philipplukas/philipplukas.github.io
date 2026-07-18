@@ -1,0 +1,25 @@
+---
+layout: default
+---
+<article class="prose post">
+  <header class="post-header">
+    {%- if page.series -%}
+    <p class="post-series">{{ page.series }}{% if page.part %} · Part {{ page.part }}{% endif %}</p>
+    {%- endif -%}
+    <h1 class="page-title">{{ page.title }}</h1>
+    {%- if page.subtitle -%}
+    <p class="post-subtitle">{{ page.subtitle }}</p>
+    {%- endif -%}
+    <p class="post-meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%-d %B %Y" }}</time>
+      · {{ content | number_of_words | divided_by: 200 | plus: 1 }} min read
+      {%- if page.repo %} · <a href="{{ page.repo }}">code</a>{% endif -%}
+    </p>
+  </header>
+
+  {{ content }}
+
+  <footer class="post-footer">
+    <a href="{{ '/writing/' | relative_url }}">← All writing</a>
+  </footer>
+</article>
