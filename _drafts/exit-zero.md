@@ -2,7 +2,6 @@
 title: "Your tool exited 0. It did nothing."
 subtitle: "What a misbehaving RGB controller taught me about designing tools for language models."
 series: "Harness engineering"
-date: 2026-07-21
 description: "A CLI that reports success without doing anything is the most dangerous kind of tool — for a shell script, and much more so for an agent."
 ---
 
