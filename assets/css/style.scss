@@ -364,7 +364,9 @@ body {
 
 /* ------------------------------------------------------------- post list */
 
-.post-list {
+/* Scoped under .prose so the generic `.prose ul` padding doesn't win on
+   specificity and indent the list. */
+.prose .post-list {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -377,6 +379,7 @@ body {
 }
 
 .post-list li:first-child { padding-top: 0; }
+.post-list li:last-child { border-bottom: 0; }
 
 .post-list__title {
   font-family: var(--font-serif);
