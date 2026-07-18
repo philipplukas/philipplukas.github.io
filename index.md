@@ -1,21 +1,23 @@
 ---
 layout: page
 title: Philipp Guldimann
-description: AI & Platform Engineer — from data to AI that creates value in production.
+description: AI Harness Engineer — LLM evaluation, agent reliability, and the data pipelines underneath.
 hero: true
 ---
 
 <h1 class="hero-name">Philipp Guldimann</h1>
-<p class="hero-role">AI &amp; Platform Engineer · Zürich, Switzerland</p>
+<p class="hero-role">AI Harness Engineer · Zürich, Switzerland</p>
 
-<p class="lede">I build the infrastructure that carries data from raw ingestion to AI that creates value in production.</p>
+<p class="lede">I build the scaffolding that makes AI systems survive production — evaluation, agent reliability, and the data pipelines underneath.</p>
 
 At a Zürich AI startup I built LLM evaluation infrastructure — 23 evaluators across 10+ models — that cut QA cycles from two days to four hours. I'm now building multi-jurisdiction legal AI pipelines processing roughly one million documents across three countries. My roots are in trustworthy AI research: I was a core contributor to [COMPL-AI](https://arxiv.org/abs/2410.07959), an open benchmark for LLM compliance with the EU AI Act. I hold an MSc in Machine Intelligence from ETH Zürich, and I care about pragmatic, scalable systems that ship and prove their value with metrics.
 
 <ul class="tags">
-  <li>LLMs &amp; agents</li>
-  <li>Evaluation &amp; MLOps</li>
+  <li>LLM evaluation</li>
+  <li>Agent reliability</li>
   <li>Data pipelines</li>
+  <li>Evals &amp; MLOps</li>
+  <li>Platform engineering</li>
   <li>Trustworthy AI</li>
   <li>Python / TypeScript</li>
   <li>AWS / Azure</li>
