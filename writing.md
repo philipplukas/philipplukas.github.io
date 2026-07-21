@@ -11,7 +11,7 @@ hero: true
 
 <p class="lede">Notes on harness engineering: the scaffolding around a language model — agent loops, tool schemas, context management, sandboxing, evals, telemetry — and the failure modes that only show up once something is actually running.</p>
 
-<p>Most writing about agents stops at the happy path. I'm more interested in the layers underneath it, approached the way you'd approach any other system: bottom-up, one layer at a time, with attention to what breaks. Code for the series lives in a single repository that grows with each post rather than a graveyard of one-off demos.</p>
+<p>Most writing about agents stops at the happy path. I'm more interested in the layers underneath it, approached the way you'd approach any other system: bottom-up, one layer at a time, with attention to what breaks. Code for the series will live in a single repository that grows with each post rather than a graveyard of one-off demos.</p>
 
 <ul class="post-list">
 {%- for post in site.posts %}

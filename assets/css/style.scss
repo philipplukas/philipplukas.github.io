@@ -461,6 +461,45 @@ body {
 
 /* ------------------------------------------------------- homepage bits   */
 
+.hero {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1.75rem;
+}
+
+.hero__portrait {
+  flex: none;
+  width: 108px;
+  height: 108px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid var(--rule);
+}
+
+.hero__text { min-width: 0; }
+
+/* The dot is decorative; "Open to" carries the meaning in text. */
+.hero__status {
+  display: inline-flex;
+  align-items: center;
+  gap: .45rem;
+  font-size: .8125rem;
+  color: var(--accent-strong);
+  background: var(--accent-wash);
+  border: 1px solid color-mix(in srgb, var(--accent) 25%, transparent);
+  border-radius: 999px;
+  padding: .2rem .75rem;
+  margin: 0 !important;
+}
+
+.hero__status-dot {
+  width: .45rem;
+  height: .45rem;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
 .hero-name {
   font-family: var(--font-serif);
   font-size: var(--step-4);
@@ -474,6 +513,43 @@ body {
   font-size: var(--step-1);
   color: var(--ink-muted);
   margin: 0 0 1.75rem !important;
+}
+
+/* Inside the hero flex row the status pill supplies the trailing gap. */
+.hero__text .hero-name { margin-bottom: .35rem; }
+.hero__text .hero-role { margin-bottom: .8rem !important; }
+
+/* Contact call-to-action */
+.cta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .6rem;
+  margin: 0 !important;
+}
+
+.cta a { text-decoration: none; }
+
+.cta__primary {
+  background: var(--accent);
+  color: var(--bg) !important;
+  border-radius: 6px;
+  padding: .55rem 1.1rem;
+  font-weight: 600;
+}
+
+.cta__primary:hover { background: var(--accent-strong); }
+
+.cta__secondary {
+  color: var(--ink-muted) !important;
+  border: 1px solid var(--rule-strong);
+  border-radius: 6px;
+  padding: .55rem 1.1rem;
+}
+
+.cta__secondary:hover {
+  color: var(--accent) !important;
+  border-color: var(--accent);
 }
 
 /* CV-style entries: role, org, dates */
@@ -591,6 +667,17 @@ body {
     padding-top: 1.75rem;
     margin-bottom: 2.5rem;
   }
+
+  .hero {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.15rem;
+  }
+
+  .hero__portrait { width: 84px; height: 84px; }
+
+  .cta { gap: .5rem; }
+  .cta a { flex: 1 1 auto; text-align: center; }
 
   .prose h2 { margin-top: 2.5rem; }
 

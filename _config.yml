@@ -16,6 +16,12 @@ plugins:
 feed:
   path: feed.xml
 
+# Social card. jekyll-seo-tag reads `page.image`, so the `image` default under
+# `defaults:` gives every page a preview; a post can override it with its own
+# `image:`. No `twitter:` block here on purpose — without a real handle,
+# seo-tag emits an empty `twitter:site` of "@" and derives a bogus
+# `twitter:creator` from the author name.
+
 permalink: /writing/:title/
 
 # Only posts get a blanket default. Pages set `layout:` explicitly so that
@@ -26,6 +32,12 @@ defaults:
       type: posts
     values:
       layout: post
+      image: /assets/img/og-card.png
+  - scope:
+      path: ""
+      type: pages
+    values:
+      image: /assets/img/og-card.png
 
 social:
   github: philipplukas
