@@ -5,9 +5,14 @@ description: AI Harness Engineer — LLM evaluation, agent reliability, and the 
 hero: true
 ---
 
-<h1 class="hero-name">Philipp Guldimann</h1>
-<p class="hero-role">AI Harness Engineer · Zürich, Switzerland</p>
-<p class="hero__status"><span class="hero__status-dot" aria-hidden="true"></span> Open to AI engineering roles — Zürich or remote</p>
+<div class="hero">
+  <img class="hero__portrait" src="{{ '/assets/img/headshot_circle.jpeg' | relative_url }}" alt="Philipp Guldimann" width="120" height="120" loading="eager">
+  <div class="hero__text">
+    <h1 class="hero-name">Philipp Guldimann</h1>
+    <p class="hero-role">AI Harness Engineer · Zürich, Switzerland</p>
+    <p class="hero__status"><span class="hero__status-dot" aria-hidden="true"></span> Open to AI engineering roles — Zürich or remote</p>
+  </div>
+</div>
 
 <p class="lede">I build the scaffolding that makes AI systems survive production — evaluation, agent reliability, and the data pipelines underneath.</p>
 

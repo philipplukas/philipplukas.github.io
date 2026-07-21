@@ -461,12 +461,27 @@ body {
 
 /* ------------------------------------------------------- homepage bits   */
 
+.hero {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1.75rem;
+}
+
+.hero__portrait {
+  flex: none;
+  width: 108px;
+  height: 108px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid var(--rule);
+}
+
+.hero__text { min-width: 0; }
+
 /* The dot is decorative; "Open to" carries the meaning in text. */
 .hero__status {
   display: inline-flex;
-  /* Direct child of the .prose grid, so it would otherwise stretch the
-     full text column instead of hugging its label. */
-  justify-self: start;
   align-items: center;
   gap: .45rem;
   font-size: .8125rem;
@@ -497,11 +512,12 @@ body {
 .hero-role {
   font-size: var(--step-1);
   color: var(--ink-muted);
-  margin: 0 0 .8rem !important;
+  margin: 0 0 1.75rem !important;
 }
 
-/* The status pill sits under the role and supplies the trailing gap. */
-.hero-role + .hero__status { margin-bottom: 2rem !important; }
+/* Inside the hero flex row the status pill supplies the trailing gap. */
+.hero__text .hero-name { margin-bottom: .35rem; }
+.hero__text .hero-role { margin-bottom: .8rem !important; }
 
 /* Contact call-to-action */
 .cta {
@@ -651,6 +667,14 @@ body {
     padding-top: 1.75rem;
     margin-bottom: 2.5rem;
   }
+
+  .hero {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.15rem;
+  }
+
+  .hero__portrait { width: 84px; height: 84px; }
 
   .cta { gap: .5rem; }
   .cta a { flex: 1 1 auto; text-align: center; }
