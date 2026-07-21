@@ -10,7 +10,7 @@ hero: true
 
 <p class="lede">I build the scaffolding that makes AI systems survive production — evaluation, agent reliability, and the data pipelines underneath.</p>
 
-At a Zürich AI startup I built LLM evaluation infrastructure — 23 evaluators across 10+ models — that cut QA cycles from two days to four hours. I'm now building multi-jurisdiction legal AI pipelines processing roughly one million documents across three countries. My roots are in trustworthy AI research: I was a core contributor to [COMPL-AI](https://arxiv.org/abs/2410.07959), an open benchmark for LLM compliance with the EU AI Act. I hold an MSc in Machine Intelligence from ETH Zürich, and I care about pragmatic, scalable systems that ship and prove their value with metrics.
+At a Zürich AI startup I built LLM evaluation infrastructure — 23 evaluators across 10+ models — that cut QA cycles from two days to four hours. Most recently I built multi-jurisdiction legal AI pipelines processing roughly one million documents across three countries. My roots are in trustworthy AI research: I am joint first author of [COMPL-AI](https://arxiv.org/abs/2410.07959), the first technical interpretation of the EU AI Act and an open benchmarking suite built on it. I hold an MSc in Machine Intelligence from ETH Zürich, and I care about pragmatic, scalable systems that ship and prove their value with metrics.
 
 <ul class="tags">
   <li>LLM evaluation</li>
@@ -46,7 +46,7 @@ I write about AI harness engineering — agent loops, tool schemas, context mana
 
 <div class="entry" markdown="1">
 <h3 class="entry__title">Data Engineer — Omnilex</h3>
-<p class="entry__meta">Feb 2026 – Present · Zürich, Switzerland</p>
+<p class="entry__meta">Feb 2026 – May 2026 · Zürich, Switzerland</p>
 
 - Built ingestion and transformation pipelines for legal content across 3 jurisdictions (Switzerland, Germany, Austria), processing ~1M documents from APIs, scraping outputs, and bulk sources.
 - Developed TypeScript-based data workflows for normalization, citation-aware chunking, embeddings, classification, and entity extraction.
@@ -69,7 +69,7 @@ I write about AI harness engineering — agent loops, tool schemas, context mana
 <h3 class="entry__title">COMPL-AI — Benchmarking LLM Compliance with the EU AI Act</h3>
 <p class="entry__meta">Research Intern · Secure Reliable Intelligence Lab, ETH Zürich · Oct 2023 – Mar 2024</p>
 
-Core contributor to COMPL-AI, evaluating 10+ models across 20 benchmarks spanning capabilities, cybersecurity, privacy, and bias/fairness. Worked on benchmark design, evaluation pipelines, and model integration via Hugging Face Transformers.
+Joint first author (equal contribution) and lead author on COMPL-AI — the first technical interpretation of the EU AI Act, mapping its six ethical principles onto 27 concrete benchmarks and evaluating 12 prominent LLMs against them. Worked on benchmark design, evaluation pipelines, and model integration via Hugging Face Transformers. The framework is positioned as a reference point for the EU's GPAI Code of Practice.
 
 [Read the paper (arXiv:2410.07959)](https://arxiv.org/abs/2410.07959) · [Code on GitHub](https://github.com/compl-ai)
 </div>
@@ -97,9 +97,9 @@ Thesis (top grade): *Detecting Disinformation on Twitter Targeting Non-Profit Or
 | | |
 |---|---|
 | **Languages** | Python, TypeScript / JavaScript, SQL |
-| **LLM / AI** | LLM evaluation, RAG, embeddings, Hugging Face Transformers, LangChain / LangGraph, MCP, PyTorch |
-| **Data & orchestration** | Airflow, Dagster, vector databases (FAISS, Weaviate, Pinecone), PostgreSQL |
-| **Backend & cloud** | FastAPI, Node.js, Docker, Kubernetes, AWS, Azure, CI/CD |
+| **LLM / AI** | LLM evaluation, RAG, embeddings, Hugging Face Transformers, MCP, PyTorch, LoRA / PEFT |
+| **Data & orchestration** | Dagster, PostgreSQL, pgvector, OpenSearch, Azure AI Search, Delta Lake, NATS |
+| **Backend & cloud** | FastAPI, NestJS, Next.js, Node.js, Docker, Kubernetes, Terraform, Argo CD, AWS, Azure, CI/CD |
 
 ## Earlier projects
 
