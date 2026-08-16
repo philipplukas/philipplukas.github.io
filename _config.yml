@@ -8,6 +8,14 @@ author:
   email: phil.guldimann@gmail.com
 
 # Custom layouts live in _layouts — no remote theme.
+
+# Pinned rather than left to the default: this is what makes kramdown turn
+# $$…$$ into \(…\) / \[…\] delimiters, which assets/katex/render-math.js then
+# renders. Switching engines silently breaks every equation on a `math: true`
+# page — the delimiters change shape and the scanner stops matching.
+kramdown:
+  math_engine: mathjax
+
 plugins:
   - jekyll-feed
   - jekyll-seo-tag

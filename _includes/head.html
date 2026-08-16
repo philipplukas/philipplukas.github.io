@@ -12,3 +12,24 @@
 
 <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 {%- feed_meta -%}
+
+{%- comment -%}
+  Math and interactive figures are opt-in per page, so pages that need neither
+  stay on the site's default budget of zero JavaScript.
+
+    math: true            -> KaTeX, self-hosted (no CDN, nothing third-party)
+    scripts: [/assets/…]  -> deferred, in order, after the math shim
+
+  KaTeX is vendored under /assets/katex rather than pulled from a CDN, so the
+  site keeps its property of loading nothing third-party. `defer` preserves
+  execution order, so the renderer always sees katex + auto-render loaded.
+{%- endcomment -%}
+{%- if page.math -%}
+<link rel="stylesheet" href="{{ '/assets/katex/katex.min.css' | relative_url }}">
+<script defer src="{{ '/assets/katex/katex.min.js' | relative_url }}"></script>
+<script defer src="{{ '/assets/katex/auto-render.min.js' | relative_url }}"></script>
+<script defer src="{{ '/assets/katex/render-math.js' | relative_url }}"></script>
+{%- endif -%}
+{%- for script in page.scripts -%}
+<script defer src="{{ script | relative_url }}"></script>
+{%- endfor -%}
