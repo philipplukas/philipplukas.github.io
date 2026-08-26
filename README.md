@@ -19,5 +19,5 @@ bundle exec jekyll serve
 
 ## About
 
-Philipp Guldimann — AI Harness Engineer, Zürich. MSc Computer Science (Machine Intelligence), ETH Zürich.
+Philipp Guldimann — Machine Learning Engineer, Zürich. MSc Computer Science (Machine Intelligence), ETH Zürich.
 Joint first author of [COMPL-AI](https://arxiv.org/abs/2410.07959), the first technical interpretation of the EU AI Act.

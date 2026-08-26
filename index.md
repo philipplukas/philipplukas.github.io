@@ -9,12 +9,12 @@ hero: true
   <img class="hero__portrait" src="{{ '/assets/img/headshot_circle.jpeg' | relative_url }}" alt="Philipp Guldimann" width="120" height="120" loading="eager">
   <div class="hero__text">
     <h1 class="hero-name">Philipp Guldimann</h1>
-    <p class="hero-role">AI Harness Engineer · Zürich, Switzerland</p>
+    <p class="hero-role">Machine Learning Engineer · Zürich, Switzerland</p>
     <p class="hero__status"><span class="hero__status-dot" aria-hidden="true"></span> Open to AI engineering roles — Zürich or remote</p>
   </div>
 </div>
 
-<p class="lede">I build the scaffolding that makes AI systems survive production — evaluation, agent reliability, and the data pipelines underneath.</p>
+<p class="lede">I build the evaluation and data infrastructure that makes AI systems survive production.</p>
 
 I am joint first author of [COMPL-AI](https://arxiv.org/abs/2410.07959), the first technical interpretation of the EU AI Act and an open benchmarking suite built on it. At LatticeFlow AI I built LLM evaluation infrastructure — 23 evaluators across 10+ models — that cut QA cycles from two days to four hours. At Omnilex I built multi-jurisdiction legal AI pipelines processing roughly one million documents across three countries. I hold an MSc in Machine Intelligence from ETH Zürich.
 
