@@ -9,11 +9,11 @@ hero: true
 
 <h1 class="page-title">Writing</h1>
 
-<p class="lede">Two series, both bottom-up: the scaffolding around a language model, and the physics underneath a speech recogniser. In each case I'm less interested in the happy path than in the layer below it — what the abstraction is standing on, and what happens when it gives.</p>
+<p class="lede">Two series, both bottom-up: the scaffolding around a language model, and the physics underneath a speech recogniser. In each case I'm less interested in the happy path than in the layer below it — what the abstraction is standing on.</p>
 
-<p><b>Harness engineering</b> is about what surrounds a model in production: agent loops, tool schemas, context management, sandboxing, evals, telemetry, and the failure modes that only appear once something is actually running.</p>
+<p><b>Harness engineering</b> is about what surrounds a model in production: agent loops, tool schemas, and the failure modes that only appear once something is running.</p>
 
-<p><b>Speech from first principles</b> derives the acoustic model of the human voice from the wave equation, then runs it backwards to show where every piece of a speech recognition front end came from. Both posts are full of diagrams you can drag and sounds you can play, and the numbers in them come out of code that ships with a test.</p>
+<p><b>Speech from first principles</b> derives the acoustic model of the human voice from the wave equation, then runs it backwards to show where every piece of a speech recognition front end came from. Both posts have diagrams you can drag and sounds you can play, and the numbers in them come out of code that ships with a test.</p>
 
 <ul class="post-list">
 {%- for post in site.posts %}

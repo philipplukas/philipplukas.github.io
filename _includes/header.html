@@ -6,6 +6,7 @@
 
   <nav class="site-nav" aria-label="Primary">
     <a href="{{ '/writing/' | relative_url }}"{% if page.nav == 'writing' %} aria-current="page"{% endif %}>Writing</a>
+    <a href="{{ '/notes/' | relative_url }}"{% if page.nav == 'notes' %} aria-current="page"{% endif %}>Notes</a>
     <a href="{{ '/thesis/' | relative_url }}"{% if page.nav == 'thesis' %} aria-current="page"{% endif %}>Thesis</a>
     <a href="https://github.com/{{ site.social.github }}" rel="me">GitHub</a>
     <a href="https://linkedin.com/in/{{ site.social.linkedin }}" rel="me">LinkedIn</a>

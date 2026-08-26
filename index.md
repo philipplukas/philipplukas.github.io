@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Philipp Guldimann
-description: AI Harness Engineer — LLM evaluation, agent reliability, and the data pipelines underneath.
+description: Machine learning engineer in Zürich — LLM evaluation, trustworthy AI, data pipelines.
 hero: true
 ---
 
@@ -16,14 +16,11 @@ hero: true
 
 <p class="lede">I build the scaffolding that makes AI systems survive production — evaluation, agent reliability, and the data pipelines underneath.</p>
 
-At a Zürich AI startup I built LLM evaluation infrastructure — 23 evaluators across 10+ models — that cut QA cycles from two days to four hours. Most recently I built multi-jurisdiction legal AI pipelines processing roughly one million documents across three countries. My roots are in trustworthy AI research: I am joint first author of [COMPL-AI](https://arxiv.org/abs/2410.07959), the first technical interpretation of the EU AI Act and an open benchmarking suite built on it. I hold an MSc in Machine Intelligence from ETH Zürich, and I care about pragmatic, scalable systems that ship and prove their value with metrics.
+I am joint first author of [COMPL-AI](https://arxiv.org/abs/2410.07959), the first technical interpretation of the EU AI Act and an open benchmarking suite built on it. At LatticeFlow AI I built LLM evaluation infrastructure — 23 evaluators across 10+ models — that cut QA cycles from two days to four hours. At Omnilex I built multi-jurisdiction legal AI pipelines processing roughly one million documents across three countries. I hold an MSc in Machine Intelligence from ETH Zürich.
 
 <ul class="tags">
   <li>LLM evaluation</li>
-  <li>Agent reliability</li>
   <li>Data pipelines</li>
-  <li>Evals &amp; MLOps</li>
-  <li>Platform engineering</li>
   <li>Trustworthy AI</li>
   <li>Python / TypeScript</li>
   <li>AWS / Azure</li>
@@ -31,7 +28,7 @@ At a Zürich AI startup I built LLM evaluation infrastructure — 23 evaluators 
 
 ## Writing
 
-I write about AI harness engineering — agent loops, tool schemas, context management, evals — and where they break in practice.
+I write about the layer around a model in production, and where it breaks.
 
 <ul class="post-list">
 {%- for post in site.posts limit: 3 %}
@@ -118,7 +115,7 @@ Thesis (top grade): *Detecting Disinformation on Twitter Targeting Non-Profit Or
 
 ## Contact
 
-<p>I'm currently open to AI engineering roles — evaluation infrastructure, agent reliability, or the data platforms underneath — in Zürich or remote. The fastest way to reach me is email.</p>
+<p>Email is the fastest way to reach me.</p>
 
 <p class="cta">
   <a class="cta__primary" href="mailto:{{ site.author.email }}">{{ site.author.email }}</a>

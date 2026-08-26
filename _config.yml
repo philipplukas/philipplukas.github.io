@@ -32,6 +32,15 @@ feed:
 
 permalink: /writing/:title/
 
+# Concept notes: small, standalone, interlinked pages that the long-form posts
+# link into. Backlinks are computed in _layouts/note.html by scanning rendered
+# content for each note's URL — pure Liquid, so it works on the stock
+# GitHub Pages build with no custom plugin.
+collections:
+  notes:
+    output: true
+    permalink: /notes/:name/
+
 # Only posts get a blanket default. Pages set `layout:` explicitly so that
 # front-matter'd assets (style.scss) never inherit an HTML layout.
 defaults:
@@ -45,6 +54,12 @@ defaults:
       path: ""
       type: pages
     values:
+      image: /assets/img/og-card.png
+  - scope:
+      path: ""
+      type: notes
+    values:
+      layout: note
       image: /assets/img/og-card.png
 
 social:

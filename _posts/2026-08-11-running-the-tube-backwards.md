@@ -22,7 +22,7 @@ Source times filter times radiation. The vowel lives in $$V$$ — the shape of t
 
 A recogniser gets $$P_{\text{out}}$$ and needs the words. So its problem, stated in one line, is: **recover $$V$$ and throw $$U_g$$ away.** That's the entire design brief for a speech front end, and nearly every strange-looking decision in one — the 25 ms window, the logarithm, the triangular filters, the discrete cosine transform nobody uses any more — is a consequence of it.
 
-Everything analysed below is synthesised by the tract model from part 1, which means the true answer is always known. When a front end recovers the filter, you can check it against the tube that actually produced the sound.
+Everything analysed below is synthesised by the tract model from part 1, which means the true answer is always known.
 
 ## Why you have to chop it up first
 
@@ -47,7 +47,7 @@ That immediately collides with the uncertainty principle of the Fourier transfor
 
 The standard settings — a 25 ms window, stepped every 10 ms — sit deliberately in the middle. 25 ms is two to three pitch periods for a typical adult voice, long enough that a low-pitched speaker's harmonics don't dominate and short enough that the tract is nearly frozen. The 10 ms hop overlaps the windows so a transient can't fall between two frames.
 
-Those numbers have survived every architectural revolution in the field since the 1970s. They aren't a convention; they're the timescale on which the physics in part 1 is true.
+Those numbers have survived every architectural revolution in the field since the 1970s.
 
 ## The cepstrum: undoing the multiplication exactly
 
@@ -87,11 +87,9 @@ Cut the cepstrum in half — "liftering", because the field committed to the spe
   <noscript><p>This figure is interactive and needs JavaScript.</p></noscript>
 </figure>
 
-Two things are worth pausing on.
-
 **Pitch detection falls out for free.** The quefrency of that spike *is* the pitch period. Measured on the synthesised vowels, it recovers 100, 120 and 200 Hz exactly. Cepstral pitch tracking is still a competitive method sixty years later.
 
-**Formant frequencies do not fall out for free.** You can see the envelope; reading reliable numbers off it is a different and much nastier problem. For /u/, where F1 and F2 are close together on a steep spectral rolloff, naive peak-picking on that orange curve is wrong more often than right. This is why, despite formants being the physically meaningful quantity, essentially no production speech recogniser has ever extracted them. The envelope is kept as an envelope — a few dozen numbers describing a shape — and the classifier is left to work out what the shape means.
+**Formant frequencies do not fall out for free.** You can see the envelope; reading reliable numbers off it is a different and much nastier problem. For /u/, where F1 and F2 are close together on a steep spectral rolloff, naive peak-picking on that orange curve is wrong more often than right. This is why, despite formants being the physically meaningful quantity, no production speech recogniser has ever extracted them. The envelope is kept as an envelope — a few dozen numbers describing a shape — and the classifier is left to work out what the shape means.
 
 That decision, made for engineering reasons in the 1970s, is the reason speech recognition features look like a smoothed spectrum rather than a description of a vocal tract.
 
@@ -129,7 +127,7 @@ The DCT is there for a reason that has nothing to do with speech. Adjacent mel b
 
 So MFCCs are not a better description of speech than log-mel. They're log-mel bent into a shape that suits a specific classifier from 1980.
 
-Which is exactly why they're gone. A neural network has no diagonal-covariance assumption, models correlated inputs happily, and would rather have the extra information the truncation threw away. Modern systems feed **log-mel filterbank energies** — typically 80 of them — straight in. The DCT was dropped when the reason for it was dropped, and it took the field about a decade to notice.
+ A neural network has no diagonal-covariance assumption, models correlated inputs happily, and would rather have the extra information the truncation threw away. Modern systems feed **log-mel filterbank energies** — typically 80 of them — straight in. The DCT was dropped when the reason for it was dropped, and it took the field about a decade to notice.
 
 ## The other half of the problem: nobody labelled the frames
 
@@ -150,7 +148,7 @@ The classical answer is a hidden Markov model. Each phone is a small left-to-rig
   <noscript><p>This figure is interactive and needs JavaScript.</p></noscript>
 </figure>
 
-Training then alternates: align with the current model, retrain on the alignment, realign. That loop — the forward–backward algorithm doing it properly, in expectation over all paths rather than just the best one — is how essentially every recogniser was built for thirty years.
+Training then alternates: align with the current model, retrain on the alignment, realign. That loop — the forward–backward algorithm doing it properly, in expectation over all paths rather than just the best one — is how every recogniser was built for thirty years.
 
 ## CTC: summing over every alignment
 
@@ -213,9 +211,9 @@ The classical fix follows straight from the physics: if the difference is a scal
 
 I find that figure genuinely satisfying: a single number, fitted to nothing but formant measurements, lands on the physical length of a child's vocal tract, because part 1 says it must.
 
-It is also where the honest part starts. My [MSc thesis]({{ '/thesis/' | relative_url }}) was about a child with a congenital speech disorder, and VTLN does not fix that. A shorter tract is a *uniform* transformation, and uniform transformations are the easy case — that's the whole reason one scalar works. A cleft palate or an Apert-syndrome craniofacial structure changes the tract's shape, not just its scale: it couples the nasal cavity in permanently, moves constrictions to places the vowel space doesn't have, and introduces zeros that an all-pole model cannot represent even in principle. There is no α for that.
+ My [MSc thesis]({{ '/thesis/' | relative_url }}) was about a child with a congenital speech disorder, and VTLN does not fix that. A shorter tract is a *uniform* transformation, and uniform transformations are the easy case — that's the whole reason one scalar works. A cleft palate or an Apert-syndrome craniofacial structure changes the tract's shape, not just its scale: it couples the nasal cavity in permanently, moves constrictions to places the vowel space doesn't have, and introduces zeros that an all-pole model cannot represent even in principle. There is no α for that.
 
-Which is the uncomfortable conclusion of both posts. The model in part 1 is good enough that fifty years of speech technology was built on it, and good enough that one scalar recovers a child's anatomy from a scatter plot. It is also a model of a smooth, unbranched, undamaged tube, and the people most in need of speech technology that works are frequently the people whose tracts are not that. When a foundation model fails on non-normative speech, the training distribution gets the blame, and it deserves a lot of it. But some of the failure is older than the data: it's built into the shape of the representation, and it has been there since we decided a voice was a buzz in a pipe.
+ The model in part 1 is good enough that fifty years of speech technology was built on it, and good enough that one scalar recovers a child's anatomy from a scatter plot. It is also a model of a smooth, unbranched, undamaged tube, and the people most in need of speech technology that works are frequently the people whose tracts are not that. When a foundation model fails on non-normative speech, the training distribution gets the blame, and it deserves a lot of it. But some of the failure is older than the data: it's built into the shape of the representation, and it has been there since we decided a voice was a buzz in a pipe.
 
 ## Where to go from here
 

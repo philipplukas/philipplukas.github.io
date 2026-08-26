@@ -15,7 +15,7 @@ Say "ah", then say "ee", and pay attention to what you changed. Not your vocal f
 
 That observation is the whole model. This post derives it properly: starting from conservation of mass in a pipe, ending at a vocal tract you can reshape by dragging, and hear. Everything below runs in the page, and every number quoted comes out of code that is [in the repository](https://github.com/philipplukas/philipplukas.github.io/blob/main/assets/js/lab.js) with [a test](https://github.com/philipplukas/philipplukas.github.io/blob/main/tools/test-lab.js) that checks it against an independent implementation.
 
-I came to this from the other end. My [MSc thesis]({{ '/thesis/' | relative_url }}) was on adapting speech recognition to children with congenital speech disorders, and the more time I spent trying to make a recogniser work on a voice it had never heard, the more I wanted to understand what it was actually looking at. Part 2 runs this model backwards — that's what a recogniser does. This part builds it.
+I came to this from the other end. My [MSc thesis]({{ '/thesis/' | relative_url }}) was on adapting speech recognition to children with congenital speech disorders, and the more time I spent trying to make a recogniser work on a voice it had never heard, the more I wanted to understand what it was actually looking at.
 
 ## The buzz is not the vowel
 
@@ -53,7 +53,7 @@ $$
 
 Multiplication in the frequency domain: the tract doesn't change *which* frequencies are present, only *how much* of each survives. The source picks the comb; the filter shapes its envelope.
 
-This is worth being suspicious of, because it is an approximation, and it is doing a lot of work. It holds when three things are true.
+It's an approximation, and it's doing a lot of work. It holds when three things are true.
 
 *The system is linear.* Sound pressures in speech are small compared to atmospheric pressure — a loud vowel is a perturbation on the order of a fraction of a percent — so the equations of motion linearise and superposition applies.
 
@@ -114,7 +114,7 @@ $$
 F_1 = \frac{35{,}000}{4 \times 17.5} = 500 \text{ Hz}, \quad F_2 = 1500 \text{ Hz}, \quad F_3 = 2500 \text{ Hz}
 $$
 
-500, 1500, 2500. That is the single most useful number set in speech acoustics, and it falls out of one length and one boundary condition. These peaks are the **formants**.
+500, 1500, 2500. That is the most useful number set in speech acoustics, and it falls out of one length and one boundary condition. These peaks are the **formants**.
 
 <figure class="lab" id="lab-tube">
   <p class="lab__title">Figure 2 · A uniform tube</p>
@@ -280,8 +280,6 @@ Then the lips. The tract's output is a flow, but what reaches a microphone is pr
 </figure>
 
 ## Where this lands: it was an all-pole filter the whole time
-
-Here is the payoff, and the bridge to part 2.
 
 A lossless chain of $$N$$ tubes, closed at one end and open at the other, has a transfer function with poles and *no zeros*. Written as a digital filter, that is
 

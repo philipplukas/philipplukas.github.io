@@ -1,0 +1,40 @@
+---
+layout: default
+---
+<article class="prose note-page">
+  <p class="note-kicker"><a href="{{ '/notes/' | relative_url }}">Notes</a>{% if page.series %} · {{ page.series }}{% endif %}</p>
+  <h1 class="page-title">{{ page.title }}</h1>
+  {%- if page.aka -%}
+  <p class="note-aka">also: {{ page.aka | join: " · " }}</p>
+  {%- endif -%}
+
+  {{ content }}
+
+  {%- comment -%}
+    Backlinks. Any post or other note whose *rendered* HTML contains a link to
+    this note's URL counts as a reference. page.url carries a trailing slash, so
+    /notes/formant/ never matches inside /notes/formant-bandwidth/. Printed
+    inline rather than collected into an array — Jekyll's Liquid has no `push`.
+  {%- endcomment -%}
+  {%- capture backlinks -%}
+    {%- for post in site.posts -%}
+      {%- if post.content contains page.url -%}
+        <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a>{% if post.series %}<span class="backlinks__tag">{{ post.series }}{% if post.part %} · Part {{ post.part }}{% endif %}</span>{% endif %}</li>
+      {%- endif -%}
+    {%- endfor -%}
+    {%- for n in site.notes -%}
+      {%- if n.url != page.url and n.content contains page.url -%}
+        <li><a href="{{ n.url | relative_url }}">{{ n.title }}</a><span class="backlinks__tag">note</span></li>
+      {%- endif -%}
+    {%- endfor -%}
+  {%- endcapture -%}
+
+  {%- if backlinks contains "<li>" -%}
+  <footer class="backlinks">
+    <h2 class="backlinks__heading">Referenced by</h2>
+    <ul class="backlinks__list">{{ backlinks }}</ul>
+  </footer>
+  {%- endif -%}
+
+  <p class="note-back"><a href="{{ '/notes/' | relative_url }}">← All notes</a></p>
+</article>
