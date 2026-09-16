@@ -21,8 +21,17 @@ html {
   --df-border-subtle: #2c2a27;
   --df-text-muted: #a09b93;
   --df-text-primary: #f3f1ec;
-  --df-text-secondary: #cbd5e1;
-  --df-text-tertiary: #706b63;
+  --df-text-secondary: #dbd5ca;
+  --df-text-tertiary: #99938a;
+
+  /* Type scale. Everything below base is one of these four steps: the theme
+     previously carried 19 distinct sizes across px, rem and em, four of them
+     between 0.84 and 0.88rem and visually identical. px is avoided because it
+     ignores the reader's font-size setting. */
+  --df-text-2xs: 0.72rem;   /* uppercase micro-labels */
+  --df-text-xs: 0.8rem;     /* captions, table meta */
+  --df-text-sm: 0.875rem;   /* secondary body, tables */
+  --df-text-base: 1rem;     /* body */
 
   /* Bootstrap 5 bridge (prevents a light flash before our rules apply) */
   --bs-body-bg: #161514;
@@ -83,7 +92,7 @@ code:not(pre code) {
   border: 1px solid var(--df-ink-border) !important;
   border-radius: 4px !important;
   padding: 0.15rem 0.38rem !important;
-  font-size: 0.88em !important;
+  font-size: var(--df-text-sm) !important;
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !important;
   font-weight: 500 !important;
   white-space: nowrap !important;
@@ -101,7 +110,7 @@ h6 code {
   border: 1px solid var(--df-ink-border) !important;
   border-radius: 6px !important;
   padding: 0.12rem 0.48rem !important;
-  font-size: 0.86em !important;
+  font-size: var(--df-text-sm) !important;
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !important;
   font-weight: 600 !important;
   letter-spacing: -0.01em !important;
@@ -131,7 +140,7 @@ h6 code {
   border: 1px solid var(--df-border-subtle) !important;
   border-bottom: 1px solid var(--df-border-subtle) !important;
   border-radius: 6px 6px 0 0 !important;
-  font-size: 0.88rem !important;
+  font-size: var(--df-text-sm) !important;
   font-weight: 500 !important;
   padding: 0.55rem 1.1rem !important;
   transition: all 0.18s cubic-bezier(0.16, 1, 0.3, 1) !important;
@@ -158,7 +167,7 @@ h6 code {
   border-top: none !important;
   border-radius: 0 0 8px 8px !important;
   padding: 1.35rem 1.6rem !important;
-  margin-top: -1px !important;
+  margin-top: -0.0625rem !important;
 }
 
 /* --------------------------------------------------------------------------
@@ -205,7 +214,7 @@ pre {
 
 pre > code.sourceCode {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !important;
-  font-size: 0.86rem !important;
+  font-size: var(--df-text-sm) !important;
 }
 
 /* --------------------------------------------------------------------------
@@ -230,7 +239,7 @@ table.dataframe th,
   border-bottom: 1px solid var(--df-border-medium) !important;
   padding: 0.65rem 0.85rem !important;
   font-weight: 600 !important;
-  font-size: 0.86rem !important;
+  font-size: var(--df-text-sm) !important;
   letter-spacing: 0.04em !important;
 }
 
@@ -240,7 +249,7 @@ table.dataframe td,
   color: var(--df-text-secondary) !important;
   border-bottom: 1px solid var(--df-border-subtle) !important;
   padding: 0.6rem 0.85rem !important;
-  font-size: 0.85rem !important;
+  font-size: var(--df-text-sm) !important;
 }
 
 table.dataframe tr:last-child td,
@@ -290,7 +299,7 @@ figure {
 figcaption,
 .figure-caption,
 .quarto-figure figcaption {
-  font-size: 0.84rem !important;
+  font-size: var(--df-text-sm) !important;
   line-height: 1.55 !important;
   color: var(--df-text-muted) !important;
   margin-top: 0.7rem !important;
@@ -458,7 +467,7 @@ h1, .h1 { font-size: clamp(1.75rem, 1.40rem + 1.20vw, 2.25rem) !important; }
 h2, .h2 { font-size: clamp(1.45rem, 1.20rem + 0.85vw, 1.80rem) !important; }
 h3, .h3 { font-size: clamp(1.20rem, 1.05rem + 0.50vw, 1.40rem) !important; }
 h4, .h4 { font-size: clamp(1.05rem, 1.00rem + 0.20vw, 1.15rem) !important; }
-h5, .h5 { font-size: 1rem !important; }
+h5, .h5 { font-size: var(--df-text-base) !important; }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--df-font-sans) !important;
@@ -513,7 +522,7 @@ p, li, td, th, figcaption, blockquote {
 .df-step-tier {
   display: block;
   font-family: var(--df-font-sans);
-  font-size: 0.66rem;
+  font-size: var(--df-text-2xs);
   font-weight: 700;
   line-height: 1.4;
   letter-spacing: 0.09em;
@@ -525,7 +534,7 @@ p, li, td, th, figcaption, blockquote {
   margin: 0.3rem 0 0;
   max-width: 70ch;
   font-family: var(--df-font-sans);
-  font-size: 0.88rem;
+  font-size: var(--df-text-sm);
   line-height: 1.55;
   color: var(--df-text-secondary);
 }
@@ -543,7 +552,7 @@ p, li, td, th, figcaption, blockquote {
 .df-spec-head {
   padding: 0.5rem 0.9rem;
   border-bottom: 1px solid var(--df-border-subtle);
-  font-size: 0.64rem;
+  font-size: var(--df-text-2xs);
   font-weight: 700;
   letter-spacing: 0.09em;
   text-transform: uppercase;
@@ -563,7 +572,7 @@ p, li, td, th, figcaption, blockquote {
 
 .df-spec-label {
   padding-top: 0.15rem;
-  font-size: 0.64rem;
+  font-size: var(--df-text-2xs);
   font-weight: 700;
   line-height: 1.5;
   letter-spacing: 0.09em;
@@ -573,7 +582,7 @@ p, li, td, th, figcaption, blockquote {
 
 .df-spec-body {
   min-width: 0;
-  font-size: 0.86rem;
+  font-size: var(--df-text-sm);
   line-height: 1.6;
   color: var(--df-text-secondary);
 }
@@ -602,8 +611,8 @@ p, li, td, th, figcaption, blockquote {
 /* ---- 15e. Contrastive triad (formal model vs. empirical case) ---- */
 
 .df-triad {
-  margin: 20px 0;
-  padding: 16px;
+  margin: 1.25rem 0;
+  padding: 1rem;
   border: 1px solid var(--df-border-subtle);
   border-radius: 8px;
   background: var(--df-bg-card);
@@ -614,29 +623,29 @@ p, li, td, th, figcaption, blockquote {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 12px;
-  padding-bottom: 8px;
-  margin-bottom: 12px;
+  gap: 0.75rem;
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
   border-bottom: 1px solid var(--df-border-hairline);
 }
 
 .df-triad-title {
-  font-size: 13px;
+  font-size: var(--df-text-sm);
   font-weight: 700;
   color: var(--df-text-primary);
   letter-spacing: -0.01em;
 }
 
 .df-triad-sub {
-  font-size: 10px;
+  font-size: var(--df-text-2xs);
   font-weight: 600;
   color: var(--df-text-tertiary);
 }
 
 .df-triad-verdict {
-  padding: 2px 8px;
+  padding: 0.125rem 0.5rem;
   border-radius: 4px;
-  font-size: 11px;
+  font-size: var(--df-text-xs);
   font-weight: 600;
   white-space: nowrap;
   color: var(--df-verdigris);
@@ -647,8 +656,8 @@ p, li, td, th, figcaption, blockquote {
 .df-triad-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 14px;
-  margin-bottom: 12px;
+  gap: 0.875rem;
+  margin-bottom: 0.75rem;
 }
 
 @media (min-width: 45rem) {
@@ -656,15 +665,15 @@ p, li, td, th, figcaption, blockquote {
 }
 
 .df-triad-panel {
-  padding: 12px;
+  padding: 0.75rem;
   border: 1px solid var(--df-border-subtle);
   border-radius: 6px;
   background: var(--df-bg-canvas);
 }
 
 .df-triad-label {
-  margin-bottom: 6px;
-  font-size: 10px;
+  margin-bottom: 0.375rem;
+  font-size: var(--df-text-2xs);
   font-weight: 700;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -672,8 +681,8 @@ p, li, td, th, figcaption, blockquote {
 }
 
 .df-triad-body {
-  margin-bottom: 8px;
-  font-size: 12px;
+  margin-bottom: 0.5rem;
+  font-size: var(--df-text-xs);
   line-height: 1.45;
   color: var(--df-text-secondary);
 }
@@ -681,7 +690,7 @@ p, li, td, th, figcaption, blockquote {
 .df-triad-body--claim { font-style: italic; }
 
 .df-triad-outcome {
-  font-size: 11px;
+  font-size: var(--df-text-xs);
   font-weight: 600;
 }
 
@@ -691,10 +700,10 @@ p, li, td, th, figcaption, blockquote {
 .df-triad-foot {
   display: flex;
   flex-wrap: wrap;
-  gap: 6px 16px;
-  padding-top: 8px;
+  gap: 0.375rem 1rem;
+  padding-top: 0.5rem;
   border-top: 1px solid var(--df-border-hairline);
-  font-size: 11px;
+  font-size: var(--df-text-xs);
   color: var(--df-text-tertiary);
 }
 
