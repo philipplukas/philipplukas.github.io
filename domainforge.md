@@ -15,7 +15,7 @@ The walkthrough describes how the system works and why it is built this way. It 
 </div>
 
 <figure class="figure--dark">
-  <img src="{{ '/assets/img/projects/domainforge-architecture.svg' | relative_url }}" alt="Architecture diagram: documents enter an ingestion tier, agents propose changes to a shared knowledge state, an energy function and Metropolis-Hastings rule accept or reject each proposal, and a topological reasoning tier serves retrieval.">
+  <img width="1780" height="1040" loading="lazy" decoding="async" src="{{ '/assets/img/projects/domainforge-architecture.svg' | relative_url }}" alt="Architecture diagram: documents enter an ingestion tier, agents propose changes to a shared knowledge state, an energy function and Metropolis-Hastings rule accept or reject each proposal, and a topological reasoning tier serves retrieval.">
   <figcaption><b>The shape of the system.</b> Documents on the left, retrieval on the right, and in the middle a shared knowledge state that only the sampler may modify. Agents are search operators over that state, not authorities on it.</figcaption>
 </figure>
 
@@ -34,7 +34,7 @@ So the measurements show that the machinery runs end to end and behaves the way 
 What is checkable today is the machinery: the thirteen operator inverses, and sheaf coboundary composition verified numerically to 1e-10. Those are properties you can run.
 
 <figure>
-  <img src="{{ '/assets/img/projects/domainforge-sheaf.svg' | relative_url }}" alt="Two connected vertices, each carrying its own local coordinate frame, with a map transporting a vector from one frame into the other. When the frames agree the transported vector lands on the target; when they disagree a residual remains.">
+  <img width="1200" height="760" loading="lazy" decoding="async" src="{{ '/assets/img/projects/domainforge-sheaf.svg' | relative_url }}" alt="Two connected vertices, each carrying its own local coordinate frame, with a map transporting a vector from one frame into the other. When the frames agree the transported vector lands on the target; when they disagree a residual remains.">
   <figcaption><b>Why a sheaf and not a graph.</b> Each node carries its own local coordinate frame, and an edge carries the map between frames. When two sources genuinely agree the transport closes; when they disagree a residual survives every available rotation, and that residual is what gets thresholded into a barrier rather than averaged away.</figcaption>
 </figure>
 

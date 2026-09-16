@@ -405,6 +405,20 @@ body {
   margin: 2.5rem 0;
 }
 
+/* Anchor targets: without this a linked heading lands flush against the
+   viewport edge with no breathing room above it. */
+.prose :is(h1, h2, h3, h4, h5, h6)[id],
+.post-list__title[id] { scroll-margin-top: 2rem; }
+
+/* Headings are short enough to strand a single word on the last line.
+   `balance` evens the lines; it is ignored by browsers that lack it. */
+.prose :is(h1, h2, h3, h4),
+.page-title,
+.entry__title { text-wrap: balance; }
+
+/* Body copy: `pretty` only prevents widows, so it is cheap on long text. */
+.prose p, .lede { text-wrap: pretty; }
+
 .prose figure img {
   display: block;
   width: 100%;

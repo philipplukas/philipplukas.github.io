@@ -9,7 +9,7 @@ nav: projects
 <p class="lede">Legal sources disagree, and they do not disagree equally. A cantonal court and a blog post are not two opinions. Evidara is a search platform for material where that difference has to survive all the way to the answer.</p>
 
 <figure>
-  <img src="{{ '/assets/img/projects/evidara-search.png' | relative_url }}" alt="The Evidara search interface: a result list of legal documents, each showing its issuing authority, jurisdiction and date, with a faceted filter panel on the left.">
+  <img width="1400" height="788" loading="lazy" decoding="async" src="{{ '/assets/img/projects/evidara-search.png' | relative_url }}" alt="The Evidara search interface: a result list of legal documents, each showing its issuing authority, jurisdiction and date, with a faceted filter panel on the left.">
   <figcaption><b>Search over ranked authority.</b> Every result carries where it came from — issuing authority, jurisdiction, date — because in legal material the provenance is part of the answer, not metadata attached to it.</figcaption>
 </figure>
 
@@ -22,7 +22,7 @@ That sounds like an implementation detail and is not one. It means a parsing bug
 Sources are modelled by provenance rather than treated as interchangeable: authority, jurisdiction, and trust tier are first-class, so ranking can use them instead of pretending a uniform corpus. Parsing produces a **citation graph** rather than full-text blobs, so a reference between two documents is an edge you can traverse rather than a string you have to match. And nothing reaches the public index without an operator approving it.
 
 <figure>
-  <img src="{{ '/assets/img/projects/evidara-detail.png' | relative_url }}" alt="A document detail panel showing the full text of a legal decision alongside tabs for details, references and related documents.">
+  <img width="1400" height="788" loading="lazy" decoding="async" src="{{ '/assets/img/projects/evidara-detail.png' | relative_url }}" alt="A document detail panel showing the full text of a legal decision alongside tabs for details, references and related documents.">
   <figcaption><b>The citation graph, surfaced.</b> References and related documents are traversals of the graph built at parse time, not a full-text similarity guess made at query time.</figcaption>
 </figure>
 
@@ -31,7 +31,7 @@ Sources are modelled by provenance rather than treated as interchangeable: autho
 A legal corpus is not a static download. Sources move, publishers change formats, and a bad ingestion run must be visible before it becomes a bad index. So roughly half the system is the control plane: acquisition runs with a preflight, a visible lifecycle, and a human-in-the-loop review and rescore loop for extraction corrections.
 
 <figure>
-  <img src="{{ '/assets/img/projects/evidara-run-detail.png' | relative_url }}" alt="The admin control plane showing an acquisition run in progress, with stage-by-stage status, counts and timings.">
+  <img width="1400" height="1006" loading="lazy" decoding="async" src="{{ '/assets/img/projects/evidara-run-detail.png' | relative_url }}" alt="The admin control plane showing an acquisition run in progress, with stage-by-stage status, counts and timings.">
   <figcaption><b>Ingestion as an observable process.</b> A run shows its stages, counts and failures while it happens, so a bad batch is caught before publication rather than discovered in search results afterwards.</figcaption>
 </figure>
 
@@ -45,11 +45,11 @@ Python (FastAPI, SQLAlchemy), TypeScript (Next.js, NestJS), PostgreSQL, OpenSear
 
 <figure class="figure-grid">
   <figure class="figure--phone">
-    <img src="{{ '/assets/img/projects/evidara-mobile.png' | relative_url }}" alt="The search result list rendered on a phone, with results stacked and filters collapsed behind a sheet.">
+    <img width="430" height="932" loading="lazy" decoding="async" src="{{ '/assets/img/projects/evidara-mobile.png' | relative_url }}" alt="The search result list rendered on a phone, with results stacked and filters collapsed behind a sheet.">
     <figcaption>The same search on a phone.</figcaption>
   </figure>
   <figure>
-    <img src="{{ '/assets/img/projects/evidara-dashboard.png' | relative_url }}" alt="The admin dashboard showing source counts, recent runs and system status.">
+    <img width="1400" height="1006" loading="lazy" decoding="async" src="{{ '/assets/img/projects/evidara-dashboard.png' | relative_url }}" alt="The admin dashboard showing source counts, recent runs and system status.">
     <figcaption>Sources, runs and system state in one place.</figcaption>
   </figure>
 </figure>
