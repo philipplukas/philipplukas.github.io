@@ -1,0 +1,730 @@
+/* ==========================================================================
+   DomainForge Quarto Walkthrough Theme Overrides
+   Claude-Scientific Design System (Warm Editorial & Academic Rigor)
+   ========================================================================== */
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  /* BEGIN GENERATED TOKENS -- edit theme.py, not this block */
+
+  /* Surfaces, borders and typography */
+  --df-bg-canvas: #161514;
+  --df-bg-card: #1f1e1c;
+  --df-bg-elevated: #282724;
+  --df-bg-subtle: rgba(255, 255, 255, 0.025);
+  --df-border-focus: #b37460;
+  --df-border-hairline: rgba(255, 255, 255, 0.08);
+  --df-border-medium: #3d3935;
+  --df-border-subtle: #2c2a27;
+  --df-text-muted: #a09b93;
+  --df-text-primary: #f3f1ec;
+  --df-text-secondary: #cbd5e1;
+  --df-text-tertiary: #706b63;
+
+  /* Bootstrap 5 bridge (prevents a light flash before our rules apply) */
+  --bs-body-bg: #161514;
+  --bs-card-bg: #1f1e1c;
+  --bs-tertiary-bg: #282724;
+  --bs-secondary-bg: #1f1e1c;
+  --bs-body-color: #f3f1ec;
+  --bs-secondary-color: #cbd5e1;
+  --bs-tertiary-color: #a09b93;
+  --bs-border-color: #2c2a27;
+  --bs-border-color-translucent: rgba(255, 255, 255, 0.08);
+
+  /* Font families bridged from Quarto / Bootstrap */
+  --df-font-sans: var(--bs-body-font-family, "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif);
+  --df-font-mono: var(--bs-font-monospace, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace);
+
+  /* Calibrated semantic accents (Okabe-Ito & Paul Tol gamut) */
+  --df-terracotta: #b37460;
+  --df-terracotta-tint: rgba(179, 116, 96, 0.14);
+  --df-terracotta-border: rgba(179, 116, 96, 0.32);
+  --df-terracotta-print: #7a402e;
+
+  --df-verdigris: #3c9693;
+  --df-verdigris-tint: rgba(60, 150, 147, 0.14);
+  --df-verdigris-border: rgba(60, 150, 147, 0.32);
+  --df-verdigris-print: #00615f;
+
+  --df-ink: #518eb3;
+  --df-ink-tint: rgba(81, 142, 179, 0.14);
+  --df-ink-border: rgba(81, 142, 179, 0.32);
+  --df-ink-print: #17597b;
+
+  --df-ochre: #a28048;
+  --df-ochre-tint: rgba(162, 128, 72, 0.14);
+  --df-ochre-border: rgba(162, 128, 72, 0.32);
+  --df-ochre-print: #6c4c0e;
+
+  --df-heather: #9379af;
+  --df-heather-tint: rgba(147, 121, 175, 0.14);
+  --df-heather-border: rgba(147, 121, 175, 0.32);
+  --df-heather-print: #5e4578;
+
+  --df-stone: #87827b;
+  --df-stone-tint: rgba(135, 130, 123, 0.14);
+  --df-stone-border: rgba(135, 130, 123, 0.32);
+  --df-stone-print: #57534c;
+
+  /* END GENERATED TOKENS */
+}
+
+/* --------------------------------------------------------------------------
+   2. Inline Code & Heading Code (Warm Mineral Ink / Glare-Free)
+   -------------------------------------------------------------------------- */
+
+code:not(pre code) {
+  color: var(--df-ink) !important;
+  background-color: var(--df-ink-tint) !important;
+  border: 1px solid var(--df-ink-border) !important;
+  border-radius: 4px !important;
+  padding: 0.15rem 0.38rem !important;
+  font-size: 0.88em !important;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !important;
+  font-weight: 500 !important;
+  white-space: nowrap !important;
+}
+
+/* Headings containing inline code */
+h1 code,
+h2 code,
+h3 code,
+h4 code,
+h5 code,
+h6 code {
+  color: var(--df-ink) !important;
+  background-color: var(--df-ink-tint) !important;
+  border: 1px solid var(--df-ink-border) !important;
+  border-radius: 6px !important;
+  padding: 0.12rem 0.48rem !important;
+  font-size: 0.86em !important;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !important;
+  font-weight: 600 !important;
+  letter-spacing: -0.01em !important;
+  vertical-align: baseline !important;
+}
+
+/* --------------------------------------------------------------------------
+   3. Panel Tabset & Navigation
+   -------------------------------------------------------------------------- */
+
+.panel-tabset {
+  margin: 1.5rem 0 2rem 0 !important;
+}
+
+.panel-tabset .nav-tabs {
+  border-bottom: 1px solid var(--df-border-subtle) !important;
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 0.35rem !important;
+  padding-bottom: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.panel-tabset .nav-tabs .nav-link {
+  color: var(--df-text-muted) !important;
+  background: var(--df-bg-card) !important;
+  border: 1px solid var(--df-border-subtle) !important;
+  border-bottom: 1px solid var(--df-border-subtle) !important;
+  border-radius: 6px 6px 0 0 !important;
+  font-size: 0.88rem !important;
+  font-weight: 500 !important;
+  padding: 0.55rem 1.1rem !important;
+  transition: all 0.18s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.panel-tabset .nav-tabs .nav-link:hover {
+  color: var(--df-text-primary) !important;
+  background: var(--df-bg-elevated) !important;
+  border-color: var(--df-ink) !important;
+}
+
+.panel-tabset .nav-tabs .nav-link.active {
+  color: var(--df-text-primary) !important;
+  background: var(--df-bg-canvas) !important;
+  border-color: var(--df-border-subtle) var(--df-border-subtle) var(--df-bg-canvas) !important;
+  border-top: 2px solid var(--df-terracotta) !important;
+  font-weight: 600 !important;
+  box-shadow: none !important;
+}
+
+.panel-tabset .tab-content {
+  background: var(--df-bg-canvas) !important;
+  border: 1px solid var(--df-border-subtle) !important;
+  border-top: none !important;
+  border-radius: 0 0 8px 8px !important;
+  padding: 1.35rem 1.6rem !important;
+  margin-top: -1px !important;
+}
+
+/* --------------------------------------------------------------------------
+   4. Blockquotes & Callouts (Warm Editorial Styling)
+   -------------------------------------------------------------------------- */
+
+blockquote {
+  border-left: 2px solid var(--df-border-medium) !important;
+  background: none !important;
+  padding: 0.25rem 0 0.25rem 1.1rem !important;
+  color: var(--df-text-secondary) !important;
+  margin: 1rem 0 !important;
+}
+
+blockquote p {
+  margin-bottom: 0.5rem !important;
+}
+
+blockquote p:last-child {
+  margin-bottom: 0 !important;
+}
+
+.callout {
+  border-radius: 8px !important;
+  border-width: 1px !important;
+  background-color: var(--df-bg-card) !important;
+  border-color: var(--df-border-subtle) !important;
+}
+
+.callout.callout-style-default {
+  border-left-width: 2px !important;
+  border-left-color: var(--df-border-medium) !important;
+}
+
+/* --------------------------------------------------------------------------
+   5. Preformatted Code Blocks & Syntax Polish
+   -------------------------------------------------------------------------- */
+
+pre {
+  border: 1px solid var(--df-border-subtle) !important;
+  border-radius: 8px !important;
+  background-color: #121110 !important;
+}
+
+pre > code.sourceCode {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !important;
+  font-size: 0.86rem !important;
+}
+
+/* --------------------------------------------------------------------------
+   6. Tables & Polars DataFrames (Tufte / Great Tables Standards)
+   -------------------------------------------------------------------------- */
+
+table.dataframe,
+.table {
+  border-collapse: separate !important;
+  border-spacing: 0 !important;
+  border: 1px solid var(--df-border-subtle) !important;
+  border-radius: 8px !important;
+  overflow: hidden !important;
+  width: 100% !important;
+  margin: 1.2rem 0 !important;
+}
+
+table.dataframe th,
+.table th {
+  background-color: var(--df-bg-card) !important;
+  color: var(--df-text-primary) !important;
+  border-bottom: 1px solid var(--df-border-medium) !important;
+  padding: 0.65rem 0.85rem !important;
+  font-weight: 600 !important;
+  font-size: 0.86rem !important;
+  letter-spacing: 0.04em !important;
+}
+
+table.dataframe td,
+.table td {
+  background-color: var(--df-bg-canvas) !important;
+  color: var(--df-text-secondary) !important;
+  border-bottom: 1px solid var(--df-border-subtle) !important;
+  padding: 0.6rem 0.85rem !important;
+  font-size: 0.85rem !important;
+}
+
+table.dataframe tr:last-child td,
+.table tr:last-child td {
+  border-bottom: none !important;
+}
+
+/* --------------------------------------------------------------------------
+   7. Anchor Links & Refined Typography
+   -------------------------------------------------------------------------- */
+
+a {
+  color: var(--df-ink) !important;
+  text-decoration: none !important;
+  transition: color 0.15s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+a:hover {
+  color: #8bb4d1 !important;
+  text-decoration: underline !important;
+}
+
+/* --------------------------------------------------------------------------
+   8. Responsive Figures, Subfigures & Scientific Captions
+   -------------------------------------------------------------------------- */
+
+.cell-output-display img,
+.quarto-figure img,
+figure img,
+.figure img {
+  max-width: 100% !important;
+  height: auto !important;
+  display: block;
+  margin: 0 auto;
+  border-radius: 8px;
+  border: 1px solid var(--df-border-hairline);
+  box-shadow: none;
+}
+
+.quarto-figure,
+figure {
+  max-width: 100% !important;
+  overflow: hidden !important;
+  margin: 1.6rem 0 !important;
+}
+
+figcaption,
+.figure-caption,
+.quarto-figure figcaption {
+  font-size: 0.84rem !important;
+  line-height: 1.55 !important;
+  color: var(--df-text-muted) !important;
+  margin-top: 0.7rem !important;
+  padding: 0 !important;
+  background: none !important;
+}
+
+figcaption strong,
+figcaption b {
+  color: var(--df-text-primary) !important;
+  font-weight: 600 !important;
+}
+
+.scientific-figure-frame {
+  background: var(--df-bg-card);
+  border: 1px solid var(--df-border-subtle);
+  border-radius: 8px;
+  box-shadow: none;
+  overflow: hidden;
+  margin: 1.4rem 0;
+}
+
+/* --------------------------------------------------------------------------
+   11. Pedagogical Table Polish
+
+        The table itself is styled in section 15; this only keeps it from
+        pushing the article column wider than the page.
+   -------------------------------------------------------------------------- */
+
+.gt_table {
+  max-width: 100% !important;
+}
+
+/* --------------------------------------------------------------------------
+   12. Quarto Native Lightbox & Vector SVG Figures
+   -------------------------------------------------------------------------- */
+
+.quarto-figure {
+  margin: 1.5rem 0;
+}
+
+.quarto-figure img,
+.cell-output-display img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  background: var(--df-bg-canvas);
+  border: 1px solid var(--df-border-subtle);
+  box-shadow: none;
+  transition: border-color 0.15s ease;
+}
+
+.quarto-figure a.lightbox:hover img {
+  border-color: var(--df-border-medium);
+  cursor: zoom-in;
+}
+
+/* GLightbox Dark Theme Overlay */
+.glightbox-container .gslide-media {
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.8) !important;
+  border-radius: 8px !important;
+  border: 1px solid var(--df-border-subtle) !important;
+  background: var(--df-bg-canvas) !important;
+}
+
+.glightbox-clean .gslide-description {
+  background: rgba(22, 21, 20, 0.95) !important;
+
+  border-top: 1px solid var(--df-border-subtle) !important;
+  color: var(--df-ink) !important;
+}
+
+.glightbox-clean .gslide-title {
+  color: var(--df-ink) !important;
+  font-weight: 700 !important;
+}
+
+.glightbox-clean .gslide-desc {
+  color: var(--df-text-muted) !important;
+}
+
+/* --------------------------------------------------------------------------
+   13. Code Syntax Highlighting (Restrained, Token-Driven)
+        Quarto ships an a11y-dark highlight theme whose palette is unrelated to
+        this document: acid green strings, salmon keywords and cyan variables,
+        roughly 900 coloured spans across 76 code blocks -- by count the largest
+        source of colour on the page. It also renders comments in near-white,
+        brighter than the code they annotate.
+
+        Two accents carry the whole scheme: ink for structure, sage for
+        literals. Terracotta is deliberately not used here, so it keeps meaning
+        "obstruction" wherever it does appear.
+   -------------------------------------------------------------------------- */
+
+/* Comments recede rather than dominate. */
+pre > code.sourceCode span.co,
+pre > code.sourceCode span.do,
+pre > code.sourceCode span.cv,
+pre > code.sourceCode span.an {
+  color: var(--df-text-tertiary) !important;
+  font-style: italic !important;
+}
+
+/* Structure: keywords, control flow, imports. */
+pre > code.sourceCode span.kw,
+pre > code.sourceCode span.cf,
+pre > code.sourceCode span.im,
+pre > code.sourceCode span.pp {
+  color: var(--df-ink) !important;
+  font-weight: 600 !important;
+}
+
+/* Literals: strings, characters, numbers, constants. */
+pre > code.sourceCode span.st,
+pre > code.sourceCode span.ss,
+pre > code.sourceCode span.sc,
+pre > code.sourceCode span.ch,
+pre > code.sourceCode span.vs,
+pre > code.sourceCode span.dv,
+pre > code.sourceCode span.fl,
+pre > code.sourceCode span.bn,
+pre > code.sourceCode span.cn {
+  color: var(--df-verdigris) !important;
+}
+
+/* Everything else is body text: names, operators, attributes, types. */
+pre > code.sourceCode span.fu,
+pre > code.sourceCode span.va,
+pre > code.sourceCode span.at,
+pre > code.sourceCode span.dt,
+pre > code.sourceCode span.op,
+pre > code.sourceCode span.ot,
+pre > code.sourceCode span.bu,
+pre > code.sourceCode span.ex {
+  color: var(--df-text-secondary) !important;
+}
+
+/* Diagnostics keep their urgency. */
+pre > code.sourceCode span.al,
+pre > code.sourceCode span.er {
+  color: var(--df-terracotta) !important;
+  font-weight: 600 !important;
+}
+pre > code.sourceCode span.wa {
+  color: var(--df-ochre) !important;
+}
+
+/* --------------------------------------------------------------------------
+   14. Type Scale & Font Normalisation
+        Two problems this fixes.
+
+        (a) Bootstrap gives h1 a 0.9vw term and h3 only 0.24vw, so the heading
+            scale collapses as the viewport narrows: measured at a 133px-wide
+            window, h1 through h4 spanned 2.5px total and the document lost its
+            structure entirely. clamp() holds a ~1.25 ratio at every width.
+            h3 is the workhorse here (38 of them against 9 h1), so it needs to
+            sit clearly below h2 rather than 1.17x below it.
+
+        (b) The page was running four UI typefaces at once -- Lato from the
+            Bootswatch theme, Inter from the widget CSS, Open Sans, and bare
+            sans-serif -- while the design system specifies IBM Plex Sans.
+   -------------------------------------------------------------------------- */
+
+h1, .h1 { font-size: clamp(1.75rem, 1.40rem + 1.20vw, 2.25rem) !important; }
+h2, .h2 { font-size: clamp(1.45rem, 1.20rem + 0.85vw, 1.80rem) !important; }
+h3, .h3 { font-size: clamp(1.20rem, 1.05rem + 0.50vw, 1.40rem) !important; }
+h4, .h4 { font-size: clamp(1.05rem, 1.00rem + 0.20vw, 1.15rem) !important; }
+h5, .h5 { font-size: 1rem !important; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--df-font-sans) !important;
+  letter-spacing: -0.012em !important;
+  text-wrap: balance;
+}
+
+body,
+.quarto-title-block .quarto-title .title,
+p, li, td, th, figcaption, blockquote {
+  font-family: var(--df-font-sans) !important;
+}
+
+
+/* --------------------------------------------------------------------------
+   15. Walkthrough Step Chrome, Specification Block & Pedagogical Tables
+
+        These rules back the HTML emitted by
+        ``domainforge.walkthrough.plotting`` and
+        ``domainforge.walkthrough.dataframe``. That presentation used to live in
+        Python f-strings, which is the same defect as a palette kept in three
+        files: nobody could change the look of a step without editing code.
+
+        Everything here is namespaced ``df-`` so it cannot collide with the
+        Bootstrap/Bootswatch rules Quarto ships, and every value resolves
+        through a ``--df-*`` token from theme.py.
+
+        The design rule the step chrome follows: each step already carries an
+        ``h2`` heading with its number and title, so the chrome beneath it must
+        add what the heading cannot -- the architectural tier and the one-line
+        summary -- and say nothing twice. The tier accent is the single piece
+        of colour in the whole step chrome; the specification block that
+        follows is deliberately achromatic and separates intuition, formal
+        statement and empirical commitment by layout and label rather than by
+        three competing hues.
+   -------------------------------------------------------------------------- */
+
+/* ---- 15a. Step meta: one restrained line, not a banner ---- */
+
+.df-step-meta {
+  --df-step-accent: var(--df-ink);
+  margin: 0.15rem 0 1.15rem;
+  padding-left: 0.8rem;
+  border-left: 2px solid var(--df-step-accent);
+}
+
+.df-step-meta--t1 { --df-step-accent: var(--df-verdigris); }
+.df-step-meta--t2 { --df-step-accent: var(--df-ink); }
+.df-step-meta--t3 { --df-step-accent: var(--df-heather); }
+.df-step-meta--eval { --df-step-accent: var(--df-ochre); }
+
+.df-step-tier {
+  display: block;
+  font-family: var(--df-font-sans);
+  font-size: 0.66rem;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--df-step-accent);
+}
+
+.df-step-summary {
+  margin: 0.3rem 0 0;
+  max-width: 70ch;
+  font-family: var(--df-font-sans);
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: var(--df-text-secondary);
+}
+
+/* ---- 15b. Specification block: one surface, three labelled rows ---- */
+
+.df-spec {
+  margin: 0 0 1.4rem;
+  border: 1px solid var(--df-border-subtle);
+  border-radius: 6px;
+  background: var(--df-bg-card);
+  font-family: var(--df-font-sans);
+}
+
+.df-spec-head {
+  padding: 0.5rem 0.9rem;
+  border-bottom: 1px solid var(--df-border-subtle);
+  font-size: 0.64rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--df-text-tertiary);
+}
+
+.df-spec-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.2rem 1.1rem;
+  padding: 0.7rem 0.9rem;
+}
+
+.df-spec-row + .df-spec-row {
+  border-top: 1px solid var(--df-border-hairline);
+}
+
+.df-spec-label {
+  padding-top: 0.15rem;
+  font-size: 0.64rem;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--df-text-tertiary);
+}
+
+.df-spec-body {
+  min-width: 0;
+  font-size: 0.86rem;
+  line-height: 1.6;
+  color: var(--df-text-secondary);
+}
+
+/* Display math can be wider than the column; it scrolls rather than spilling. */
+.df-spec-body--formal {
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  color: var(--df-text-primary);
+}
+
+@media (min-width: 45rem) {
+  .df-spec-row { grid-template-columns: 9.5rem 1fr; }
+}
+
+/* ---- 15c. Tables ---- */
+
+/* The walkthrough's tables are rendered by Great Tables, which emits its own
+   scoped stylesheet from the options in ``PedagogicalDataFrame``. The ~250
+   lines that used to live here -- the ``df-ptable`` grid, the KPI card rack,
+   the pill chips, the header-tooltip glyph and the glossary panel -- styled a
+   bespoke HTML block that no longer exists. Table appearance is now changed in
+   ``_TABLE_OPTIONS``, beside the tokens the figures use, not in this file. */
+
+
+/* ---- 15e. Contrastive triad (formal model vs. empirical case) ---- */
+
+.df-triad {
+  margin: 20px 0;
+  padding: 16px;
+  border: 1px solid var(--df-border-subtle);
+  border-radius: 8px;
+  background: var(--df-bg-card);
+  font-family: var(--df-font-sans);
+}
+
+.df-triad-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding-bottom: 8px;
+  margin-bottom: 12px;
+  border-bottom: 1px solid var(--df-border-hairline);
+}
+
+.df-triad-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--df-text-primary);
+  letter-spacing: -0.01em;
+}
+
+.df-triad-sub {
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--df-text-tertiary);
+}
+
+.df-triad-verdict {
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  white-space: nowrap;
+  color: var(--df-verdigris);
+  background: var(--df-verdigris-tint);
+  border: 1px solid var(--df-verdigris-border);
+}
+
+.df-triad-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+  margin-bottom: 12px;
+}
+
+@media (min-width: 45rem) {
+  .df-triad-grid { grid-template-columns: 1fr 1fr; }
+}
+
+.df-triad-panel {
+  padding: 12px;
+  border: 1px solid var(--df-border-subtle);
+  border-radius: 6px;
+  background: var(--df-bg-canvas);
+}
+
+.df-triad-label {
+  margin-bottom: 6px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--df-text-tertiary);
+}
+
+.df-triad-body {
+  margin-bottom: 8px;
+  font-size: 12px;
+  line-height: 1.45;
+  color: var(--df-text-secondary);
+}
+
+.df-triad-body--claim { font-style: italic; }
+
+.df-triad-outcome {
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.df-triad-outcome--blocked { color: var(--df-terracotta); }
+.df-triad-outcome--admitted { color: var(--df-verdigris); }
+
+.df-triad-foot {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 16px;
+  padding-top: 8px;
+  border-top: 1px solid var(--df-border-hairline);
+  font-size: 11px;
+  color: var(--df-text-tertiary);
+}
+
+.df-triad-foot-label {
+  font-weight: 600;
+  color: var(--df-text-muted);
+}
+
+/* ---------------------------------------------------------------------------
+   Figure and output containment
+
+   Quarto's float wrapper sets ``overflow-x: hidden``, so anything wider than
+   the column is cut off silently -- no scrollbar, no indication content is
+   missing. Three figures were losing 129px, 783px and 914px off their right
+   edge. Vega writes a ``viewBox`` on ``svg.marks``, so unlike a Plotly
+   ``main-svg`` these scale instead of cropping: constraining the width shrinks
+   the drawing rather than hiding part of it.
+   --------------------------------------------------------------------------- */
+.quarto-float svg.marks,
+.cell-output-display svg.marks,
+.quarto-float img,
+.cell-output-display img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Kernel output is not source code, so ``code-overflow: wrap`` never reached
+   it: a single 1600px-wide UserWarning line was scrolling on its own. */
+.cell-output-stdout pre,
+.cell-output-stderr pre {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}

@@ -36,9 +36,10 @@ I write about the layer around a model in production, and where it breaks.
     <h3 class="post-list__title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
     <p class="post-list__meta">
       <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%-d %B %Y" }}</time>
+      {%- if post.series %} · {{ post.series }}{% if post.part %} · Part {{ post.part }}{% endif %}{% endif %}
       · {{ post.content | number_of_words | divided_by: 200 | plus: 1 }} min read
     </p>
-    <p class="post-list__excerpt">{{ post.subtitle | default: post.excerpt | strip_html | truncate: 160 }}</p>
+    <p class="post-list__excerpt">{{ post.subtitle | default: post.excerpt | strip_html | truncate: 180 }}</p>
   </li>
 {%- else %}
   <li><p class="post-list__empty">First post going up shortly — <a href="{{ '/writing/' | relative_url }}">what the series covers</a>.</p></li>
@@ -75,6 +76,26 @@ I write about the layer around a model in production, and where it breaks.
 Joint first author (equal contribution) and lead author on COMPL-AI — the first technical interpretation of the EU AI Act, mapping its six ethical principles onto 27 concrete benchmarks and evaluating 12 prominent LLMs against them. Worked on benchmark design, evaluation pipelines, and model integration via Hugging Face Transformers. The framework is positioned as a reference point for the EU's GPAI Code of Practice.
 
 [Read the paper (arXiv:2410.07959)](https://arxiv.org/abs/2410.07959) · [Code on GitHub](https://github.com/compl-ai)
+</div>
+
+## Projects
+
+<div class="entry" markdown="1">
+<h3 class="entry__title"><a href="{{ '/domainforge/' | relative_url }}">DomainForge — Relational domain-model induction</a></h3>
+<p class="entry__meta">Self-directed · Sept 2026 – present</p>
+
+Give a system a corpus from a company it knows nothing about, and no schema. Agents propose changes to a shared knowledge state; a minimum-description-length energy and a Metropolis-Hastings rule decide what survives, so the ontology is annealed rather than fixed in advance. Thirteen reversible operators, each with its inverse asserted by round-trip tests.
+
+[Project page]({{ '/domainforge/' | relative_url }}) · [Interactive walkthrough]({{ '/domainforge/walkthrough/' | relative_url }})
+</div>
+
+<div class="entry" markdown="1">
+<h3 class="entry__title"><a href="{{ '/evidara/' | relative_url }}">Evidara — Legal document intelligence platform</a></h3>
+<p class="entry__meta">Self-directed · Mar 2026 – present</p>
+
+Search over legal sources that differ in authority, jurisdiction and trust, built around one decision: canonical truth is separated from the serving projection, so the index is a rebuildable view rather than the system of record. Thirteen services, moved from Google Cloud onto self-hosted Kubernetes, with 59 architecture decision records and two dozen automated checkers holding the boundaries in place.
+
+[Project page]({{ '/evidara/' | relative_url }})
 </div>
 
 ## Education

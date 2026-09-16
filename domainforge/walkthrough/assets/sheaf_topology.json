@@ -1,0 +1,608 @@
+{
+  "dataset": "CityLens: Zurich Municipal Sample (25 docs)",
+  "seed_id": "ogd_geo_schulweguebergaenge",
+  "n_total_nodes": 1415,
+  "n_total_edges": 3237,
+  "0": {
+    "nodes": [
+      {
+        "id": "mentions",
+        "label": "mentions",
+        "type": "entity",
+        "ctx": "universal",
+        "color": "#3c9693",
+        "x": 415,
+        "y": 226,
+        "radius": 16,
+        "evidence": ""
+      },
+      {
+        "id": "rel_ogd_geo_schulweguebergaenge_srv",
+        "label": "rel_ogd_geo_schu\u2026",
+        "type": "relation",
+        "ctx": "universal",
+        "color": "#9379af",
+        "x": 577,
+        "y": 357,
+        "radius": 12,
+        "evidence": ""
+      },
+      {
+        "id": "rel_ogd_geo_schulweguebergaenge_46a9",
+        "label": "rel_ogd_geo_schu\u2026",
+        "type": "relation",
+        "ctx": "universal",
+        "color": "#9379af",
+        "x": 371,
+        "y": 190,
+        "radius": 12,
+        "evidence": ""
+      },
+      {
+        "id": "rel_ogd_geo_schulweguebergaenge_8d325d82",
+        "label": "rel_ogd_geo_schu\u2026",
+        "type": "relation",
+        "ctx": "universal",
+        "color": "#9379af",
+        "x": 206,
+        "y": 237,
+        "radius": 12,
+        "evidence": ""
+      },
+      {
+        "id": "rel_ogd_geo_schulweguebergaenge_schulweguebergaenge_json",
+        "label": "rel_ogd_geo_schu\u2026",
+        "type": "relation",
+        "ctx": "universal",
+        "color": "#9379af",
+        "x": 463,
+        "y": 293,
+        "radius": 12,
+        "evidence": ""
+      },
+      {
+        "id": "ent_geodatenelemente",
+        "label": "ent_geodatenelem\u2026",
+        "type": "entity",
+        "ctx": "universal",
+        "color": "#3c9693",
+        "x": 214,
+        "y": 430,
+        "radius": 16,
+        "evidence": ""
+      },
+      {
+        "id": "ogd_geo_schulweguebergaenge",
+        "label": "ogd_geo_schulweg\u2026",
+        "type": "document",
+        "ctx": "universal",
+        "color": "#518eb3",
+        "x": 443,
+        "y": 199,
+        "radius": 18,
+        "evidence": ""
+      },
+      {
+        "id": "rel_ogd_geo_schulweguebergaenge_stzh",
+        "label": "rel_ogd_geo_schu\u2026",
+        "type": "relation",
+        "ctx": "universal",
+        "color": "#9379af",
+        "x": 175,
+        "y": 124,
+        "radius": 12,
+        "evidence": ""
+      },
+      {
+        "id": "ent_644b68318ef8",
+        "label": "ent_644b68318ef8",
+        "type": "entity",
+        "ctx": "universal",
+        "color": "#3c9693",
+        "x": 334,
+        "y": 316,
+        "radius": 16,
+        "evidence": ""
+      },
+      {
+        "id": "rel_ogd_geo_schulweguebergaenge_schulwege",
+        "label": "rel_ogd_geo_schu\u2026",
+        "type": "relation",
+        "ctx": "universal",
+        "color": "#9379af",
+        "x": 413,
+        "y": 96,
+        "radius": 12,
+        "evidence": ""
+      },
+      {
+        "id": "rel_ogd_geo_schulweguebergaenge_644b68318ef8",
+        "label": "rel_ogd_geo_schu\u2026",
+        "type": "relation",
+        "ctx": "universal",
+        "color": "#9379af",
+        "x": 608,
+        "y": 147,
+        "radius": 12,
+        "evidence": ""
+      },
+      {
+        "id": "rel_ogd_geo_schulweguebergaenge_arbeit_und_erwerb",
+        "label": "rel_ogd_geo_schu\u2026",
+        "type": "relation",
+        "ctx": "universal",
+        "color": "#9379af",
+        "x": 310,
+        "y": 272,
+        "radius": 12,
+        "evidence": ""
+      },
+      {
+        "id": "ent_arbeit_und_erwerb",
+        "label": "ent_arbeit_und_e\u2026",
+        "type": "entity",
+        "ctx": "universal",
+        "color": "#3c9693",
+        "x": 474,
+        "y": 432,
+        "radius": 16,
+        "evidence": ""
+      },
+      {
+        "id": "ent_stzh",
+        "label": "ent_stzh",
+        "type": "entity",
+        "ctx": "universal",
+        "color": "#3c9693",
+        "x": 99,
+        "y": 241,
+        "radius": 16,
+        "evidence": ""
+      },
+      {
+        "id": "rel_ogd_geo_schulweguebergaenge_web",
+        "label": "rel_ogd_geo_schu\u2026",
+        "type": "relation",
+        "ctx": "universal",
+        "color": "#9379af",
+        "x": 574,
+        "y": 96,
+        "radius": 12,
+        "evidence": ""
+      },
+      {
+        "id": "rel_ogd_geo_schulweguebergaenge_geodatenelemente",
+        "label": "rel_ogd_geo_schu\u2026",
+        "type": "relation",
+        "ctx": "universal",
+        "color": "#9379af",
+        "x": 487,
+        "y": 277,
+        "radius": 12,
+        "evidence": ""
+      },
+      {
+        "id": "ent_srv",
+        "label": "ent_srv",
+        "type": "entity",
+        "ctx": "universal",
+        "color": "#3c9693",
+        "x": 338,
+        "y": 450,
+        "radius": 16,
+        "evidence": ""
+      },
+      {
+        "id": "ent_46a9",
+        "label": "ent_46a9",
+        "type": "entity",
+        "ctx": "universal",
+        "color": "#3c9693",
+        "x": 641,
+        "y": 391,
+        "radius": 16,
+        "evidence": ""
+      },
+      {
+        "id": "ent_schulweguebergaenge_json",
+        "label": "ent_schulweguebe\u2026",
+        "type": "entity",
+        "ctx": "universal",
+        "color": "#3c9693",
+        "x": 284,
+        "y": 66,
+        "radius": 16,
+        "evidence": ""
+      },
+      {
+        "id": "rel_ogd_geo_schulweguebergaenge_schulweg\u00fcberg\u00e4nge",
+        "label": "rel_ogd_geo_schu\u2026",
+        "type": "relation",
+        "ctx": "universal",
+        "color": "#9379af",
+        "x": 574,
+        "y": 182,
+        "radius": 12,
+        "evidence": ""
+      },
+      {
+        "id": "ent_schulweg\u00fcberg\u00e4nge",
+        "label": "ent_schulweg\u00fcber\u2026",
+        "type": "entity",
+        "ctx": "universal",
+        "color": "#3c9693",
+        "x": 158,
+        "y": 159,
+        "radius": 16,
+        "evidence": ""
+      },
+      {
+        "id": "ent_81a9",
+        "label": "ent_81a9",
+        "type": "entity",
+        "ctx": "universal",
+        "color": "#3c9693",
+        "x": 126,
+        "y": 374,
+        "radius": 16,
+        "evidence": ""
+      },
+      {
+        "id": "rel_ogd_geo_schulweguebergaenge_81a9",
+        "label": "rel_ogd_geo_schu\u2026",
+        "type": "relation",
+        "ctx": "universal",
+        "color": "#9379af",
+        "x": 333,
+        "y": 381,
+        "radius": 12,
+        "evidence": ""
+      },
+      {
+        "id": "ent_schulwege",
+        "label": "ent_schulwege",
+        "type": "entity",
+        "ctx": "universal",
+        "color": "#3c9693",
+        "x": 632,
+        "y": 225,
+        "radius": 16,
+        "evidence": ""
+      },
+      {
+        "id": "ent_8d325d82",
+        "label": "ent_8d325d82",
+        "type": "entity",
+        "ctx": "universal",
+        "color": "#3c9693",
+        "x": 421,
+        "y": 63,
+        "radius": 16,
+        "evidence": ""
+      },
+      {
+        "id": "ent_web",
+        "label": "ent_web",
+        "type": "entity",
+        "ctx": "universal",
+        "color": "#3c9693",
+        "x": 719,
+        "y": 265,
+        "radius": 16,
+        "evidence": ""
+      }
+    ],
+    "links": [
+      {
+        "source": "mentions",
+        "target": "rel_ogd_geo_schulweguebergaenge_srv",
+        "role": "links"
+      },
+      {
+        "source": "mentions",
+        "target": "rel_ogd_geo_schulweguebergaenge_46a9",
+        "role": "links"
+      },
+      {
+        "source": "mentions",
+        "target": "rel_ogd_geo_schulweguebergaenge_8d325d82",
+        "role": "links"
+      },
+      {
+        "source": "mentions",
+        "target": "rel_ogd_geo_schulweguebergaenge_schulweguebergaenge_json",
+        "role": "links"
+      },
+      {
+        "source": "mentions",
+        "target": "rel_ogd_geo_schulweguebergaenge_stzh",
+        "role": "links"
+      },
+      {
+        "source": "mentions",
+        "target": "rel_ogd_geo_schulweguebergaenge_schulwege",
+        "role": "links"
+      },
+      {
+        "source": "mentions",
+        "target": "rel_ogd_geo_schulweguebergaenge_644b68318ef8",
+        "role": "links"
+      },
+      {
+        "source": "mentions",
+        "target": "rel_ogd_geo_schulweguebergaenge_arbeit_und_erwerb",
+        "role": "links"
+      },
+      {
+        "source": "mentions",
+        "target": "rel_ogd_geo_schulweguebergaenge_web",
+        "role": "links"
+      },
+      {
+        "source": "mentions",
+        "target": "rel_ogd_geo_schulweguebergaenge_geodatenelemente",
+        "role": "links"
+      },
+      {
+        "source": "mentions",
+        "target": "rel_ogd_geo_schulweguebergaenge_schulweg\u00fcberg\u00e4nge",
+        "role": "links"
+      },
+      {
+        "source": "mentions",
+        "target": "rel_ogd_geo_schulweguebergaenge_81a9",
+        "role": "links"
+      },
+      {
+        "source": "rel_ogd_geo_schulweguebergaenge_srv",
+        "target": "ogd_geo_schulweguebergaenge",
+        "role": "links"
+      },
+      {
+        "source": "rel_ogd_geo_schulweguebergaenge_srv",
+        "target": "ent_srv",
+        "role": "links"
+      },
+      {
+        "source": "rel_ogd_geo_schulweguebergaenge_46a9",
+        "target": "ogd_geo_schulweguebergaenge",
+        "role": "links"
+      },
+      {
+        "source": "rel_ogd_geo_schulweguebergaenge_46a9",
+        "target": "ent_46a9",
+        "role": "links"
+      },
+      {
+        "source": "rel_ogd_geo_schulweguebergaenge_8d325d82",
+        "target": "ogd_geo_schulweguebergaenge",
+        "role": "links"
+      },
+      {
+        "source": "rel_ogd_geo_schulweguebergaenge_8d325d82",
+        "target": "ent_8d325d82",
+        "role": "links"
+      },
+      {
+        "source": "rel_ogd_geo_schulweguebergaenge_schulweguebergaenge_json",
+        "target": "ogd_geo_schulweguebergaenge",
+        "role": "links"
+      },
+      {
+        "source": "rel_ogd_geo_schulweguebergaenge_schulweguebergaenge_json",
+        "target": "ent_schulweguebergaenge_json",
+        "role": "links"
+      },
+      {
+        "source": "ent_geodatenelemente",
+        "target": "rel_ogd_geo_schulweguebergaenge_geodatenelemente",
+        "role": "links"
+      },
+      {
+        "source": "ogd_geo_schulweguebergaenge",
+        "target": "rel_ogd_geo_schulweguebergaenge_644b68318ef8",
+        "role": "links"
+      },
+      {
+        "source": "ogd_geo_schulweguebergaenge",
+        "target": "rel_ogd_geo_schulweguebergaenge_81a9",
+        "role": "links"
+      },
+      {
+        "source": "ogd_geo_schulweguebergaenge",
+        "target": "rel_ogd_geo_schulweguebergaenge_arbeit_und_erwerb",
+        "role": "links"
+      },
+      {
+        "source": "ogd_geo_schulweguebergaenge",
+        "target": "rel_ogd_geo_schulweguebergaenge_geodatenelemente",
+        "role": "links"
+      },
+      {
+        "source": "ogd_geo_schulweguebergaenge",
+        "target": "rel_ogd_geo_schulweguebergaenge_schulwege",
+        "role": "links"
+      },
+      {
+        "source": "ogd_geo_schulweguebergaenge",
+        "target": "rel_ogd_geo_schulweguebergaenge_schulweg\u00fcberg\u00e4nge",
+        "role": "links"
+      },
+      {
+        "source": "ogd_geo_schulweguebergaenge",
+        "target": "rel_ogd_geo_schulweguebergaenge_stzh",
+        "role": "links"
+      },
+      {
+        "source": "ogd_geo_schulweguebergaenge",
+        "target": "rel_ogd_geo_schulweguebergaenge_web",
+        "role": "links"
+      },
+      {
+        "source": "rel_ogd_geo_schulweguebergaenge_stzh",
+        "target": "ent_stzh",
+        "role": "links"
+      },
+      {
+        "source": "ent_644b68318ef8",
+        "target": "rel_ogd_geo_schulweguebergaenge_644b68318ef8",
+        "role": "links"
+      },
+      {
+        "source": "rel_ogd_geo_schulweguebergaenge_schulwege",
+        "target": "ent_schulwege",
+        "role": "links"
+      },
+      {
+        "source": "rel_ogd_geo_schulweguebergaenge_arbeit_und_erwerb",
+        "target": "ent_arbeit_und_erwerb",
+        "role": "links"
+      },
+      {
+        "source": "rel_ogd_geo_schulweguebergaenge_web",
+        "target": "ent_web",
+        "role": "links"
+      },
+      {
+        "source": "rel_ogd_geo_schulweguebergaenge_schulweg\u00fcberg\u00e4nge",
+        "target": "ent_schulweg\u00fcberg\u00e4nge",
+        "role": "links"
+      },
+      {
+        "source": "ent_81a9",
+        "target": "rel_ogd_geo_schulweguebergaenge_81a9",
+        "role": "links"
+      }
+    ]
+  },
+  "1": {
+    "nodes": [
+      {
+        "id": "c1_1",
+        "label": "School Crossings & Accid",
+        "sub": "2 members",
+        "type": "cluster",
+        "color": "#b37460",
+        "x": 660,
+        "y": 250,
+        "radius": 26,
+        "members": [
+          "co_ent_1000_personen_ent_sasa",
+          "ent_1000_personen"
+        ]
+      },
+      {
+        "id": "c1_2",
+        "label": "Council Governance (149_",
+        "sub": "2 members",
+        "type": "cluster",
+        "color": "#518eb3",
+        "x": 530,
+        "y": 379,
+        "radius": 26,
+        "members": [
+          "co_ent_149_2016_ent_protokolleintrag_2016",
+          "ent_149_2016"
+        ]
+      },
+      {
+        "id": "c1_3",
+        "label": "School Crossings & Accid",
+        "sub": "2 members",
+        "type": "cluster",
+        "color": "#3c9693",
+        "x": 270,
+        "y": 379,
+        "radius": 26,
+        "members": [
+          "co_ent_15f97797_ent_gr\u00fcn",
+          "ent_15f97797"
+        ]
+      },
+      {
+        "id": "c1_4",
+        "label": "School Crossings & Accid",
+        "sub": "2 members",
+        "type": "cluster",
+        "color": "#a28048",
+        "x": 140,
+        "y": 250,
+        "radius": 26,
+        "members": [
+          "co_ent_17d6_ent_15f97797",
+          "ent_17d6"
+        ]
+      },
+      {
+        "id": "c1_5",
+        "label": "Council Governance (2025",
+        "sub": "2 members",
+        "type": "cluster",
+        "color": "#9379af",
+        "x": 269,
+        "y": 120,
+        "radius": 26,
+        "members": [
+          "co_ent_2025_0510_ent_svp",
+          "ent_2025_0510"
+        ]
+      },
+      {
+        "id": "c1_6",
+        "label": "Council Governance (20.0",
+        "sub": "2 members",
+        "type": "cluster",
+        "color": "#87827b",
+        "x": 529,
+        "y": 120,
+        "radius": 26,
+        "members": [
+          "co_ent_20_04_2016_ent_stadt_z\u00fcrich",
+          "ent_20_04_2016"
+        ]
+      }
+    ],
+    "links": []
+  },
+  "2": {
+    "nodes": [
+      {
+        "id": "c2_0",
+        "label": "Domain Alpha (Primary)",
+        "sub": "Cross-Silo Entities & Records",
+        "type": "cluster",
+        "color": "#518eb3",
+        "x": 280,
+        "y": 250,
+        "radius": 34,
+        "members": [
+          "c1_1",
+          "c1_2",
+          "c1_3"
+        ]
+      },
+      {
+        "id": "c2_1",
+        "label": "Domain Beta (Governance)",
+        "sub": "Administrative Hyperedges",
+        "type": "cluster",
+        "color": "#a28048",
+        "x": 520,
+        "y": 250,
+        "radius": 34,
+        "members": [
+          "c1_4",
+          "c1_5",
+          "c1_6"
+        ]
+      }
+    ],
+    "links": [
+      {
+        "source": "c2_0",
+        "target": "c2_1",
+        "weight": 1.6
+      }
+    ]
+  }
+}

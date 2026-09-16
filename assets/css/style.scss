@@ -437,6 +437,33 @@ body {
 
 .figure-grid figure { margin: 0; }
 
+/* Diagrams exported with their own dark canvas: the default white img
+   background shows as a border of the wrong colour around them. */
+.prose figure.figure--dark img {
+  background: #161514;
+  border-color: #161514;
+}
+
+/* Work-in-progress / caveat callout. Deliberately loud: it exists to stop a
+   reader treating superseded numbers as current. */
+.prose .notice--wip {
+  border-left: 3px solid #b4442e;
+  background: color-mix(in srgb, #b4442e 7%, transparent);
+  padding: 1rem 1.25rem;
+  margin: 2rem 0;
+  border-radius: 0 6px 6px 0;
+  font-size: .9375rem;
+}
+.prose .notice--wip p:first-child { margin-top: 0; }
+.prose .notice--wip p:last-child { margin-bottom: 0; }
+
+/* A phone screenshot in a figure-grid is portrait next to landscape siblings;
+   without a cap it takes several times their height. */
+.figure-grid figure.figure--phone img {
+  max-width: 15rem;
+  margin: 0 auto;
+}
+
 /* ------------------------------------------------------------- post list */
 
 /* Scoped under .prose so the generic `.prose ul` padding doesn't win on
